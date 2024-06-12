@@ -1,9 +1,10 @@
 package webserver
 
 import (
-	"log"
 	"net/http"
 	"strconv"
+
+	"github.com/sirupsen/logrus"
 )
 
 var courses = map[int64]string{
@@ -16,8 +17,10 @@ func StartWebserver() {
 	http.HandleFunc("/courses/description", CoursesDescHandler)
 
 	port := "80"
-	log.Printf("Starting server on port %s\n", port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	logrus.WithFields(logrus.Fields{
+		"port": port,
+	}).Info("Starting server on port")
+	logrus.Fatal(http.ListenAndServe(":"+port, nil))
 }
 
 func IndexHandler(w http.ResponseWriter, r *http.Request) {
@@ -29,14 +32,14 @@ func CoursesDescHandler(w http.ResponseWriter, r *http.Request) {
 
 	courseId, err := strconv.ParseInt(courseIdParam, 10, 64)
 	if err != nil {
-		log.Printf("Error: courseIdParam parsing: %s\n", err.Error())
+		logrus.WithError(err).Error("courseIdParam parsing")
 		w.WriteHeader(http.StatusBadRequest)
 		return
 	}
 
 	course, ok := courses[courseId]
 	if !ok {
-		log.Printf("Warning: Course doesn't exist")
+		logrus.Info("Course doesn't exist")
 		w.WriteHeader(http.StatusNotFound)
 		return
 	}
