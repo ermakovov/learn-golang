@@ -10,5 +10,6 @@ func main() {
 	color.Red(greeting.Hello())
 
 	// webserver.StartCoursesWebserver()
-	webserver.StartMathWebserver()
+	// webserver.StartMathWebserver()
+	webserver.StartCurrExchangeServer()
 }
