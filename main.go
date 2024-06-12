@@ -9,5 +9,6 @@ import (
 func main() {
 	color.Red(greeting.Hello())
 
-	webserver.StartWebserver()
+	// webserver.StartCoursesWebserver()
+	webserver.StartMathWebserver()
 }

@@ -18,7 +18,7 @@ var courses = map[int64]string{
 	2: "Second course",
 }
 
-func StartWebserver() {
+func StartCoursesWebserver() {
 	http.HandleFunc("/", IndexHandler)
 	http.HandleFunc("/courses/description", CoursesDescHandler)
 
