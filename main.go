@@ -12,5 +12,6 @@ func main() {
 	// webserver.StartCoursesWebserver()
 	// webserver.StartMathWebserver()
 	// webserver.StartCurrExchangeServer()
-	webserver.StartSocialNetworkServer()
+	// webserver.StartSocialNetworkServer()
+	webserver.StartArrayFinderServer()
 }
