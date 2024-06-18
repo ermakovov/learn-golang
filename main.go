@@ -13,5 +13,6 @@ func main() {
 	// webserver.StartMathWebserver()
 	// webserver.StartCurrExchangeServer()
 	// webserver.StartSocialNetworkServer()
-	webserver.StartArrayFinderServer()
+	// webserver.StartArrayFinderServer()
+	webserver.StartSimpleStorageServer()
 }
