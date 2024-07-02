@@ -14,5 +14,6 @@ func main() {
 	// webserver.StartCurrExchangeServer()
 	// webserver.StartSocialNetworkServer()
 	// webserver.StartArrayFinderServer()
-	webserver.StartSimpleStorageServer()
+	// webserver.StartSimpleStorageServer()
+	webserver.StartURLExchangerServer()
 }
