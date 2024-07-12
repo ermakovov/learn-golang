@@ -16,5 +16,6 @@ func main() {
 	// webserver.StartArrayFinderServer()
 	// webserver.StartSimpleStorageServer()
 	// webserver.StartURLExchangerServer()
-	webserver.StartToDoServer()
+	// webserver.StartToDoServer()
+	webserver.StartHTTPValidationServer()
 }
