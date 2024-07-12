@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/ermakovov/learn-golang/greeting"
-	"github.com/ermakovov/learn-golang/webserver"
+	"github.com/ermakovov/learn-golang/webserver2"
 	"github.com/fatih/color"
 )
 
@@ -17,5 +17,6 @@ func main() {
 	// webserver.StartSimpleStorageServer()
 	// webserver.StartURLExchangerServer()
 	// webserver.StartToDoServer()
-	webserver.StartHTTPValidationServer()
+	// webserver.StartHTTPValidationServer()
+	webserver2.StartJWTAuthServer()
 }
